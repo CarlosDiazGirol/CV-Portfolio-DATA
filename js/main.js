@@ -4,6 +4,7 @@ import getSkills from './utils/skillsList.js'
 import menu from './utils/menu.js'
 import getCheatsheets from './utils/cheatsheetsList.js'
 import { getResources } from './utils/resourcesGenerator.js.js'
+import getWeather from './utils/weather.js'
 
 const siteHeader = document.getElementById('site-header')
 const siteFooter = document.getElementById('site-footer')
@@ -16,3 +17,4 @@ menu()
 getSkills()
 getCheatsheets()
 getResources()
+getWeather()

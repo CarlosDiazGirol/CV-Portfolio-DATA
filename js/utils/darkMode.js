@@ -14,9 +14,9 @@ const darkMode = () => {
   // Estado inicial
   if (isDarkMode) {
     siteContainer.classList.add('dark')
-    themeIcon.innerText = '🌙'
+    themeIcon.innerText = '💡'
   } else {
-    themeIcon.innerText = '☀️'
+    themeIcon.innerText = '🌙'
   }
 
   // Reactivar transiciones después de aplicar el estado inicial para que sí funcione la transición al pulsar el botón
@@ -27,7 +27,7 @@ const darkMode = () => {
 
   siteThemeMode.addEventListener('click', () => {
     const isDark = siteContainer.classList.toggle('dark')
-    themeIcon.innerText = isDark ? '🌙' : '☀️'
+    themeIcon.innerText = isDark ? '💡' : '🌙' 
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
   })
 }

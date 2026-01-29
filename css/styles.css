@@ -89,6 +89,7 @@ body {
 
 .header-menu {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -136,6 +137,39 @@ a.active {
   border: 1px solid var(--light);
   border-radius: 5px;
   background-color: transparent;
+}
+
+/* weather */
+.weather-widget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--light);
+  border-radius: 5px;
+  background-color: var(--white);
+  font-size: 0.9rem;
+}
+
+.weather-city {
+  color: var(--primary);
+  font-weight: var(--font-bold);
+}
+
+.weather-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.weather-temp {
+  color: var(--secondary);
+  font-weight: var(--font-bold);
+}
+
+.weather-error,
+.weather-loading {
+  color: var(--secondary);
+  font-size: 0.85rem;
 }
 
 /* hero */
@@ -593,6 +627,74 @@ a.active {
   align-self: flex-start;
 }
 
+/* projects */
+.current-project h2 {
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.project-card {
+  flex: 0 1 500px;
+  padding: 30px;
+  border: 1px solid var(--light);
+  border-radius: 10px;
+  background-color: var(--white);
+  transition: all 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+}
+
+.project-subtitle {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  font-weight: var(--font-bold);
+  margin: 0 0 20px 0;
+}
+
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.project-features li {
+  padding: 0 25px;
+  position: relative;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.project-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: var(--font-bold);
+  font-size: 1.2rem;
+}
+
+.project-card .btn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 /* resources */
 .resources-section h2 {
   color: var(--secondary);
@@ -618,7 +720,7 @@ a.active {
   font-weight: var(--font-bold);
   cursor: pointer;
   border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   position: relative;
   bottom: -2px;
 }
@@ -660,7 +762,6 @@ a.active {
 }
 
 .resource-card:hover {
-  border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -782,6 +883,90 @@ a.active {
   background: var(--grey-transparent);
 }
 
+/* Dark mode - Header y navegación */
+.dark .site-header {
+  background-color: var(--dark);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .header-nav a {
+  color: var(--light);
+}
+
+.dark a.active {
+  border-bottom-color: var(--highlight);
+}
+
+.dark .ham span {
+  background-color: var(--light);
+}
+
+.dark .site-theme-mode {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .weather-widget {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .weather-city {
+  color: var(--highlight);
+}
+
+.dark .weather-temp {
+  color: var(--light);
+}
+
+.dark .header-menu {
+  background-color: var(--dark);
+}
+
+.dark .resource-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .resource-card:hover {
+  border-color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .resource-card h3 {
+  color: var(--light);
+}
+
+.dark .tab-btn {
+  color: var(--light);
+}
+
+.dark .tab-btn.active {
+  color: var(--highlight);
+  border-bottom-color: var(--highlight);
+}
+
+.dark .resources-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .project-card:hover {
+  border-color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .project-card h3 {
+  color: var(--light);
+}
+
+.dark .project-features li {
+  color: var(--light);
+}
+
 /* animations */
 @keyframes heartbeat {
   0%, 100% {transform: scale(1);}
@@ -823,8 +1008,9 @@ a.active {
     flex-direction: column;
     position: fixed;
     top: 70px;
-    right: -300px;
-    padding: 20px 80px;
+    right: -500px;
+    text-align: center;
+    padding: 20px 25px;
     border: 1px solid var(--light);
     border-radius: 0 0 0 5px ;
     background-color: var(--white);

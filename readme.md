@@ -12,7 +12,7 @@ Sitio web profesional que incluye:
 - **Modo oscuro** persistente con localStorage
 - **Diseño responsive** adaptable a diferentes dispositivos
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **HTML5**: Semántica, accesibilidad y buenas prácticas
 - **CSS3**: Custom properties, Flexbox, animaciones y transiciones
@@ -20,7 +20,7 @@ Sitio web profesional que incluye:
 - **FormSubmit**: Servicio de envío de emails sin backend
 - **Cloudinary**: CDN para imágenes optimizadas
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 CVData/
@@ -156,7 +156,7 @@ CVData/
 - Event delegation
 - Código DRY (Don't Repeat Yourself)
 
-## 🔮 Mejoras Futuras Posibles
+## Mejoras Futuras Posibles
 
 - [ ] Sistema de routing SPA
 - [ ] Lazy loading de imágenes
@@ -172,6 +172,27 @@ Preparado para **GitHub Pages**:
 - Rutas relativas configuradas
 - Assets en CDN (Cloudinary)
 - Sin dependencias de build
+
+## Seguridad y API Keys
+
+### WeatherAPI Key
+
+Este proyecto utiliza **WeatherAPI** para mostrar el clima en tiempo real. La API key está visible en el código del cliente (`weather.js`):
+
+### Consideraciones Importantes
+
+**En este proyecto educativo es seguro porque:**
+- ✅ WeatherAPI tiene **plan gratuito** con límites de uso
+- ✅ La API incluye **rate limiting** automático
+- ✅ No hay costes asociados ni datos sensibles
+- ✅ El consumo está protegido por las restricciones de la API
+
+**En un proyecto profesional/producción:**
+- ❌ **NUNCA** expongas API keys con costes asociados
+- ❌ **NUNCA** expongas keys que accedan a datos sensibles
+- ✅ Usa **variables de entorno** con build tools (Vite, Webpack)
+- ✅ Usa **serverless functions** (Netlify, Vercel) como proxy
+- ✅ Implementa **backend proxy** para ocultar las keys
 
 ##  Autor
 
