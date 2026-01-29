@@ -1,7 +1,7 @@
 const header = `
 <div class="header-content">
   <div class="site-logo">
-    <a href="/">
+    <a href="./index.html">
       <img src="https://res.cloudinary.com/dataimages/image/upload/v1768570952/Data-CV/datalogo_fffq2x.png" alt="Imagen logo de portada de El Data">
     </a>
   </div>
